@@ -1,0 +1,71 @@
+#projects{
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+  padding-bottom: 40px;
+}
+#projects p{
+  color: #000;
+  font-size: 25px;
+  padding: 40px 0;
+  font-weight: bold;
+  text-align: center;
+}
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  gap: 50px;
+  justify-content: center;
+}
+#projects .papa{
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#projects .papa .child1{
+  height: 35px;
+  font-size: 18px;
+  background-color: #0000006b;
+  bottom: 0;
+}
+.child1 a{
+  width: 50%;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to left, transparent 50%, #dc3545 50%) right;
+  background-size: 200%;
+  transition: 1s all ease-in-out;
+}
+.child1 a:hover{
+  background-position: left;
+}
+
+@media screen and (max-width:500px) 
+{
+  #projects{
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+  #projects p{
+    font-size: 20px;
+    padding: 20px 0;
+    font-weight: bold;
+  }
+  main{
+    grid-template-columns: 200px;
+    gap: 20px;
+  }
+  .papa{
+    width: 200px;
+    height: 180px;
+  }
+  .child1{
+    height: 30px;
+  }
+}

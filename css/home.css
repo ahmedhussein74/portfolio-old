@@ -1,0 +1,128 @@
+#home{
+   height: calc(100vh - 50px);
+   color: #fff;
+   justify-content: space-evenly;
+}
+.cvText{
+   width: 25%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   font-size: 20px;
+}
+.cvText a{
+   width: 150px;
+   height: 30px;
+   display: grid;
+   place-items: center;
+   text-decoration: none;
+   background-color: #fd7e14;
+}
+#home span {
+   color: #fd7e14;
+}
+.cvImg{
+   width: 400px;
+   height: 400px;
+   position: relative;
+   border-radius: 50%;
+   background: url('../imgs/bg.jpg');
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.cvImg::before{
+   position: absolute;
+   content: "";
+   width: 420px;
+   height: 420px;
+   border-radius: 50%;
+   border: 10px solid #0d6efd;
+   border-bottom: 10px solid transparent;
+   animation: rotate 4s linear 1s infinite forwards;
+}
+.cvImg::after{
+   position: absolute;
+   content: "";
+   width: 440px;
+   height: 440px;
+   border-radius: 50%;
+   border: 10px solid crimson;
+   border-top: 10px solid transparent;
+   animation: rotate 4s linear 1s infinite forwards;
+}
+@keyframes rotate 
+{
+   from{
+      transform: rotate(0);
+   }
+   to{
+      transform: rotate(360deg);
+   }
+}
+@media screen and (max-width:900px) 
+{
+   #home{
+      height: calc(100vh - 50px);
+      flex-direction: column-reverse;
+   }
+   .cvText{
+      width: 90%;
+      font-size: 18px;
+      padding: 0 20px;
+   }
+   #home span{
+      display: block;
+      font-size: 20px;
+   }
+   .cvText a{
+      width: 120px;
+      height: 30px;
+   }
+   .cvImg{
+      width: 160px;
+      height: 160px;
+   }
+   .cvImg::before{
+      width: 200px;
+      height: 200px;
+   }
+   .cvImg::after{
+      width: 240px;
+      height: 240px;
+   }
+}
+@media screen and (max-width:500px) 
+{
+   #home{
+      height: calc(100vh - 40px);
+      flex-direction: column-reverse;
+   }
+   .cvText{
+      width: 90%;
+      font-size: 18px;
+      padding: 0 20px;
+   }
+   #home span{
+      display: block;
+      font-size: 20px;
+   }
+   .cvText a{
+      width: 120px;
+      height: 30px;
+   }
+   .cvImg{
+      width: 160px;
+      height: 160px;
+   }
+   .cvImg::before{
+      width: 200px;
+      height: 200px;
+   }
+   .cvImg::after{
+      width: 240px;
+      height: 240px;
+   }
+}
